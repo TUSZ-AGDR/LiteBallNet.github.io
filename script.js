@@ -1,4 +1,4 @@
-const REPOSITORY_URL = "https://github.com/apexanthony/LiteBallNet";
+const REPOSITORY_URL = "https://github.com/TUSZ-AGDR/LiteBallNet";
 
 document.querySelectorAll("[data-repository-link]").forEach((link) => {
   link.href = REPOSITORY_URL;
