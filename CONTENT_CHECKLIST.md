@@ -18,7 +18,7 @@
 | 完整 CA/HN 消融表 | Results | 已加入 |
 | Badminton / Table Tennis / Tennis F1 | Demos、Results | 0.9361 / 0.9859 / 0.9517 |
 | 45,644 parameters、1.876 GMAC | 首屏、Deployment | 已加入 |
-| 86.30 FPS、RK3588 16.7 ms | 首屏、Results、Deployment | 已加入 |
+| RTX 3060 Laptop 86.30 FPS、RK3588 NPU 37.0 ms / 约 30 FPS | 首屏、Results、Deployment | 已按重新测试结果更新 |
 
 ## 二、来自附录，已经作为补充材料加入
 
@@ -26,6 +26,8 @@
 |---|---|---|
 | Tennis / Badminton / Table Tennis 视频 | Demos | 展示真实连续跟踪输出 |
 | 三个视频封面 | Demos | 视频加载前显示代表帧 |
+| Badminton / Table Tennis / Tennis RK3588 端侧视频 | Deployment | 展示 RKNN/NPU 模型推理及画面内吞吐率 |
+| 三个 RK3588 视频封面 | Deployment | 端侧视频加载前显示代表帧 |
 | Coordinate Attention internals | Supplementary analysis | 解释方向门控如何重加权特征 |
 | Hard-negative construction | Supplementary analysis | 解释训练期结构化干扰掩码 |
 | Frame-matched component ablation | Supplementary analysis | 展示 CA 与 HN 的不同作用和残余失败 |
@@ -41,7 +43,7 @@
 | 1 | 完整代码、权重和 RKNN 模型 | 仓库整理完成后发布，并检查匿名或隐私信息 |
 | 2 | 可复现环境与推理命令 | 加入 GitHub README |
 | 2 | 数据集与视频许可说明 | 在仓库和项目页明确来源与许可 |
-| 2 | RK3588 真实设备演示 | 若公开，明确模型推理与端到端延迟的区别 |
+| 2 | RK3588 端侧测试说明 | 已加入演示；后续公开代码时补充设备、线程和计时配置 |
 | 3 | BibTeX | 论文公开后增加复制按钮或文本块 |
 
 ## 四、发布前核对

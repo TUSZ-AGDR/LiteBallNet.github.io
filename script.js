@@ -1,8 +1,8 @@
-// const REPOSITORY_URL = "https://github.com/TUSZ-AGDR/LiteBallNet";
+const REPOSITORY_URL = "https://github.com/apexanthony/LiteBallNet";
 
-// document.querySelectorAll("[data-repository-link]").forEach((link) => {
-//   link.href = REPOSITORY_URL;
-// });
+document.querySelectorAll("[data-repository-link]").forEach((link) => {
+  link.href = REPOSITORY_URL;
+});
 
 const sports = {
   tennis: {

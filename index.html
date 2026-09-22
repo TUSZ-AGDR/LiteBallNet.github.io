@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#f7f8fa" />
     <title>LiteBallNet · ICASSP 2027</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="styles.css?v=7" />
     <script defer src="script.js?v=6"></script>
   </head>
 
@@ -17,14 +17,8 @@
       <a class="wordmark" href="#top">LiteBallNet</a>
       <div class="nav-links">
         <a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#demos">Demos</a>
-        <a href="#results">Results</a>
-        <!-- JOURNAL RESERVED NAV START
-        <a href="#analysis">Analysis</a>
-        JOURNAL RESERVED NAV END -->
-        <!-- Restore this link after the public code release.
-        <a data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Code ↗</a>
-        -->
-        <a href="#resources">Code · Coming soon</a>
+        <a href="#results">Results</a><a href="#analysis">Analysis</a>
+        <a data-repository-link href="https://github.com/apexanthony/LiteBallNet" target="_blank" rel="noreferrer">Code ↗</a>
       </div>
     </nav>
 
@@ -40,20 +34,14 @@
         </div>
         <div class="paper-links" aria-label="Paper resources">
           <span class="project-button is-muted" aria-label="Paper link will be added after public release">Paper · after release</span>
-          <!-- Restore this button after the public code release.
-          <a class="project-button" data-repository-link href="https://github.com/mqchen0916/LiteBallNet" target="_blank" rel="noreferrer">Code · GitHub</a>
-          -->
-          <span class="project-button is-muted"
-                aria-label="Source code will be released after publication">
-            Code · Coming soon
-          </span>
+          <a class="project-button" data-repository-link href="https://github.com/apexanthony/LiteBallNet" target="_blank" rel="noreferrer">Code · GitHub</a>
           <a class="project-button is-secondary" href="#demos">Videos</a><a class="project-button is-secondary" href="#results">Results</a>
         </div>
       </header>
 
       <section class="metric-strip" aria-label="Headline results">
         <div><strong>45,644</strong><span>parameters</span></div><div><strong>1.876</strong><span>GMAC</span></div>
-        <div><strong>86.30</strong><span>FPS · RTX 3060 Laptop</span></div><div><strong>16.7 ms</strong><span>RK3588 RKNN · ≈60 FPS</span></div>
+        <div><strong>86.30</strong><span>FPS · RTX 3060 Laptop</span></div><div><strong>37.0 ms</strong><span>RK3588 RKNN · ≈30 FPS</span></div>
       </section>
 
       <section class="content-section prose-section" id="abstract">
@@ -103,7 +91,7 @@
       <section class="content-section wide-section" id="results">
         <div class="section-heading"><span>Experiments</span><h2>Accuracy, capacity, and latency</h2><p>All values below follow the four-page ICASSP manuscript. The main comparison uses 360 × 640 input; dagger-marked FPS values were measured on the same RTX 3060 Laptop.</p></div>
         <figure class="paper-figure bordered-figure result-figure" aria-labelledby="latency-caption">
-          <a class="figure-link" href="assets/figures/fig2_accuracy_latency.pdf" target="_blank" rel="noreferrer" aria-label="Open Figure 2 as a PDF"><img src="assets/figures/fig2_accuracy_latency.png?v=1" alt="Average accuracy versus latency across three benchmarks with parameter count represented by bubble area" width="2181" height="826" loading="lazy" decoding="async" /></a>
+          <a class="figure-link" href="assets/figures/fig2_accuracy_latency.pdf" target="_blank" rel="noreferrer" aria-label="Open Figure 2 as a PDF"><img src="assets/figures/fig2_accuracy_latency.png?v=2" alt="Average accuracy versus latency across three benchmarks with parameter count represented by bubble area and updated RK3588 latency" width="2181" height="826" loading="lazy" decoding="async" /></a>
           <figcaption id="latency-caption"><span><strong>Figure 2.</strong> Average accuracy versus latency. Bubble area denotes parameters, the star marks LiteBallNet, and the inset reports RK3588 RKNN latency.</span><a href="assets/figures/fig2_accuracy_latency.pdf" target="_blank" rel="noreferrer">Vector PDF ↗</a></figcaption>
         </figure>
         <figure class="table-figure main-results-table">
@@ -136,7 +124,7 @@
           <figcaption><strong>Table 2.</strong> Cross-sport test F1-score ablation under the 4-pixel protocol.</figcaption>
         </figure>
       </section>
-<!-- JOURNAL RESERVED SUPPLEMENTARY START
+
       <section class="content-section wide-section" id="analysis">
         <div class="section-heading"><span>Supplementary analysis</span><h2>What the two lightweight mechanisms change</h2><p>These appendix figures expose intermediate responses and representative failure modes. They supplement the four-page paper without introducing new headline claims.</p></div>
         <div class="analysis-grid">
@@ -150,16 +138,43 @@
           <details><summary><span>Temporal response evolution</span><small>Five-frame windows across three sports</small></summary><figure class="paper-figure evidence-figure"><img src="assets/figures/fig_s9_temporal_response_evolution.png" alt="Five-frame response evolution for tennis, badminton, and table tennis" width="1444" height="1268" loading="lazy" decoding="async" /><figcaption>Peak position and response strength evolve smoothly under the three-frame protocol, while invisible frames also show why downstream association should not rely on peak probability alone. <a href="assets/figures/fig_s9_temporal_response_evolution.pdf" target="_blank" rel="noreferrer">Open PDF ↗</a></figcaption></figure></details>
         </div>
       </section>
-JOURNAL RESERVED SUPPLEMENTARY END -->
+
       <section class="content-section" id="deployment">
         <div class="section-heading"><span>Edge deployment</span><h2>One inference graph, sport-specific checkpoints</h2><p>The shared tensor interface allows sport-specific checkpoints to use one RKNN pipeline. Deployment to another supported sport requires checkpoint replacement rather than redesigning the inference graph.</p></div>
-        <dl class="deployment-specs"><div><dt>Model size</dt><dd>45,644 parameters</dd></div><div><dt>Computation</dt><dd>1.876 GMAC</dd></div><div><dt>RTX 3060 Laptop</dt><dd>86.30 FPS</dd></div><div><dt>RK3588 NPU · RKNN</dt><dd>16.7 ms · approximately 60 FPS</dd></div><div><dt>TrackNetV2 prototype on RK3588</dt><dd>about 1 FPS</dd></div></dl>
+        <dl class="deployment-specs"><div><dt>Model size</dt><dd>45,644 parameters</dd></div><div><dt>Computation</dt><dd>1.876 GMAC</dd></div><div><dt>RTX 3060 Laptop</dt><dd>86.30 FPS</dd></div><div><dt>RK3588 NPU · RKNN</dt><dd>37.0 ms · approximately 30 FPS</dd></div><div><dt>TrackNetV2 prototype on RK3588</dt><dd>about 1 FPS</dd></div></dl>
         <p class="deployment-note">Reported values are model-inference measurements; end-to-end camera, decoding, and display latency is not claimed.</p>
+        <div class="deployment-video-heading">
+          <h3>RK3588 NPU deployment demonstrations</h3>
+          <p>On-device RKNN inference across badminton, table tennis, and tennis. The overlays report the measured model-inference throughput rather than end-to-end camera-to-display latency.</p>
+        </div>
+        <div class="deployment-video-grid">
+          <figure class="deployment-video-card">
+            <video controls muted loop playsinline preload="metadata" poster="assets/posters/badminton_rk3588_poster.jpg" aria-label="Badminton RK3588 NPU inference demonstration">
+              <source src="assets/videos/edge/badminton_rk3588.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <figcaption><strong>Badminton</strong><span>RK3588 NPU · RKNN inference</span></figcaption>
+          </figure>
+          <figure class="deployment-video-card">
+            <video controls muted loop playsinline preload="metadata" poster="assets/posters/table_tennis_rk3588_poster.jpg" aria-label="Table tennis RK3588 NPU inference demonstration">
+              <source src="assets/videos/edge/table_tennis_rk3588.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <figcaption><strong>Table tennis</strong><span>RK3588 NPU · RKNN inference</span></figcaption>
+          </figure>
+          <figure class="deployment-video-card">
+            <video controls muted loop playsinline preload="metadata" poster="assets/posters/tennis_rk3588_poster.jpg" aria-label="Tennis RK3588 NPU inference demonstration">
+              <source src="assets/videos/edge/tennis_rk3588.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <figcaption><strong>Tennis</strong><span>RK3588 NPU · RKNN inference</span></figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="content-section resources-section" id="resources">
         <div class="section-heading"><span>Resources</span><h2>Paper, code, and contact</h2></div>
-        <div class="resource-list"><div><span>Paper</span><p><strong>ICASSP 2027 manuscript</strong><br />The public PDF link will be enabled after the release timing is confirmed.</p><em>Pending</em></div><div><span>Code</span><p><strong>LiteBallNet repository</strong><br />Code, inference, evaluation, and future model resources.</p><em>Coming soon</em><!--<a data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Open repository ↗</a>--></div><div><span>Contact</span><p><strong>Corresponding authors</strong><br />liqiang1@sztu.edu.cn · wangpeizheng@sztu.edu.cn</p><em>SZTU</em></div></div>
+        <div class="resource-list"><div><span>Paper</span><p><strong>ICASSP 2027 manuscript</strong><br />The public PDF link will be enabled after the release timing is confirmed.</p><em>Pending</em></div><div><span>Code</span><p><strong>LiteBallNet repository</strong><br />Code, inference, evaluation, and future model resources.</p><a data-repository-link href="https://github.com/apexanthony/LiteBallNet" target="_blank" rel="noreferrer">Open repository ↗</a></div><div><span>Contact</span><p><strong>Corresponding authors</strong><br />liqiang1@sztu.edu.cn · wangpeizheng@sztu.edu.cn</p><em>SZTU</em></div></div>
       </section>
     </main>
 
