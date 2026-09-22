@@ -1,6 +1,6 @@
 # LiteBallNet 项目网页内容清单
 
-网页内容以 `liteballnet_icassp2027.tex` 为主依据，`LiteBallNet_appendix.tex` 只用于补充可视化与解释。
+网页内容以 `liteballnet_icassp2027.tex` 为主依据。`LiteBallNet_appendix.tex` 中的分析素材仍保留在工程内，但 ICASSP 公开版已注释隐藏。
 
 ## 一、来自四页 ICASSP 论文，已经加入
 
@@ -20,7 +20,7 @@
 | 45,644 parameters、1.876 GMAC | 首屏、Deployment | 已加入 |
 | RTX 3060 Laptop 86.30 FPS、RK3588 NPU 37.0 ms / 约 30 FPS | 首屏、Results、Deployment | 已按重新测试结果更新 |
 
-## 二、来自附录，已经作为补充材料加入
+## 二、演示视频与已隐藏的附录分析
 
 | 内容 | 网页位置 | 公开作用 |
 |---|---|---|
@@ -28,19 +28,19 @@
 | 三个视频封面 | Demos | 视频加载前显示代表帧 |
 | Badminton / Table Tennis / Tennis RK3588 端侧视频 | Deployment | 展示 RKNN/NPU 模型推理及画面内吞吐率 |
 | 三个 RK3588 视频封面 | Deployment | 端侧视频加载前显示代表帧 |
-| Coordinate Attention internals | Supplementary analysis | 解释方向门控如何重加权特征 |
-| Hard-negative construction | Supplementary analysis | 解释训练期结构化干扰掩码 |
-| Frame-matched component ablation | Supplementary analysis | 展示 CA 与 HN 的不同作用和残余失败 |
-| Confidence-conditioned cases | Supplementary analysis | 说明 peak probability 不能单独代表定位可靠性 |
-| Local HN comparison | Supplementary analysis | 展示目标峰与竞争峰的相对排序变化 |
-| Temporal response evolution | Supplementary analysis | 展示三帧协议下的响应连续性与不可见帧问题 |
+| Coordinate Attention internals | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
+| Hard-negative construction | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
+| Frame-matched component ablation | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
+| Confidence-conditioned cases | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
+| Local HN comparison | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
+| Temporal response evolution | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
 
 ## 三、现阶段仍不公开或仍需补充
 
 | 优先级 | 内容 | 处理建议 |
 |---:|---|---|
 | 1 | 正式论文 PDF / arXiv / IEEE Xplore | 确认公开时间后启用 Paper 按钮 |
-| 1 | 完整代码、权重和 RKNN 模型 | 仓库整理完成后发布，并检查匿名或隐私信息 |
+| 1 | 完整代码、权重和 RKNN 模型 | 录用后发布；当前所有 Code 入口已注释隐藏 |
 | 2 | 可复现环境与推理命令 | 加入 GitHub README |
 | 2 | 数据集与视频许可说明 | 在仓库和项目页明确来源与许可 |
 | 2 | RK3588 端侧测试说明 | 已加入演示；后续公开代码时补充设备、线程和计时配置 |
@@ -49,7 +49,7 @@
 ## 四、发布前核对
 
 - [ ] 论文公开时间已经确认，Paper 链接不会提前泄露投稿材料。
-- [ ] GitHub 仓库在无登录浏览器中可访问。
+- [ ] 录用后再将代码仓库转为 public，并恢复网页中的 Code 入口。
 - [ ] 三段视频来源允许网页展示与再分发。
 - [ ] 表格数字与最终 `liteballnet_icassp2027.tex` 保持一致。
 - [ ] 明确同一网络架构分别训练三个 checkpoint，而不是同一 checkpoint 同时处理三种运动。

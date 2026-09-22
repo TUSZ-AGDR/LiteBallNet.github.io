@@ -17,8 +17,12 @@
       <a class="wordmark" href="#top">LiteBallNet</a>
       <div class="nav-links">
         <a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#demos">Demos</a>
-        <a href="#results">Results</a><a href="#analysis">Analysis</a>
-        <a data-repository-link href="https://github.com/apexanthony/LiteBallNet" target="_blank" rel="noreferrer">Code ↗</a>
+        <a href="#results">Results</a>
+        <!-- ICASSP public version: enable these links after the corresponding
+             supplementary analysis and source code are released.
+        <a href="#analysis">Analysis</a>
+        <a data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Code ↗</a>
+        -->
       </div>
     </nav>
 
@@ -34,7 +38,9 @@
         </div>
         <div class="paper-links" aria-label="Paper resources">
           <span class="project-button is-muted" aria-label="Paper link will be added after public release">Paper · after release</span>
-          <a class="project-button" data-repository-link href="https://github.com/apexanthony/LiteBallNet" target="_blank" rel="noreferrer">Code · GitHub</a>
+          <!-- ICASSP public version: source code will be released after acceptance.
+          <a class="project-button" data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Code · GitHub</a>
+          -->
           <a class="project-button is-secondary" href="#demos">Videos</a><a class="project-button is-secondary" href="#results">Results</a>
         </div>
       </header>
@@ -70,7 +76,7 @@
       </section>
 
       <section class="content-section" id="demos">
-        <div class="section-heading"><span>Supplementary videos</span><h2>Cross-sport tracking outputs</h2><p>The supplied supplementary clips show the model output on tennis, badminton, and table tennis. Each benchmark uses the same architecture with a separately trained checkpoint.</p></div>
+        <div class="section-heading"><span>Qualitative demos</span><h2>Cross-sport tracking outputs</h2><p>Representative project-page clips show the model output on tennis, badminton, and table tennis. Each benchmark uses the same architecture with a separately trained checkpoint.</p></div>
         <div class="demo-shell">
           <div class="sport-tabs" role="tablist" aria-label="Sport demos">
             <button class="sport-tab is-active" role="tab" aria-selected="true" aria-controls="sport-panel" data-sport="tennis"><span>Tennis</span><strong>F1 95.17%</strong></button>
@@ -85,7 +91,7 @@
             <div class="demo-meta"><div><span>Benchmark</span><strong id="demo-title">Tennis</strong></div><div><span>Reported F1</span><strong id="demo-score">95.17%</strong></div><div><span>Model output</span><strong>Full-resolution heatmap</strong></div></div>
           </div>
         </div>
-        <p class="figure-caption"><strong>Supplementary video.</strong> Representative tracking sequences supplied with the appendix.</p>
+        <p class="figure-caption"><strong>Tracking demonstrations.</strong> Representative output sequences across the three evaluated sports.</p>
       </section>
 
       <section class="content-section wide-section" id="results">
@@ -125,6 +131,9 @@
         </figure>
       </section>
 
+      <!-- ICASSP public version: appendix/supplementary analyses are retained
+           in the repository but hidden from the public project page. Restore
+           this section for a future extended or journal version.
       <section class="content-section wide-section" id="analysis">
         <div class="section-heading"><span>Supplementary analysis</span><h2>What the two lightweight mechanisms change</h2><p>These appendix figures expose intermediate responses and representative failure modes. They supplement the four-page paper without introducing new headline claims.</p></div>
         <div class="analysis-grid">
@@ -138,6 +147,7 @@
           <details><summary><span>Temporal response evolution</span><small>Five-frame windows across three sports</small></summary><figure class="paper-figure evidence-figure"><img src="assets/figures/fig_s9_temporal_response_evolution.png" alt="Five-frame response evolution for tennis, badminton, and table tennis" width="1444" height="1268" loading="lazy" decoding="async" /><figcaption>Peak position and response strength evolve smoothly under the three-frame protocol, while invisible frames also show why downstream association should not rely on peak probability alone. <a href="assets/figures/fig_s9_temporal_response_evolution.pdf" target="_blank" rel="noreferrer">Open PDF ↗</a></figcaption></figure></details>
         </div>
       </section>
+      -->
 
       <section class="content-section" id="deployment">
         <div class="section-heading"><span>Edge deployment</span><h2>One inference graph, sport-specific checkpoints</h2><p>The shared tensor interface allows sport-specific checkpoints to use one RKNN pipeline. Deployment to another supported sport requires checkpoint replacement rather than redesigning the inference graph.</p></div>
@@ -173,8 +183,14 @@
       </section>
 
       <section class="content-section resources-section" id="resources">
-        <div class="section-heading"><span>Resources</span><h2>Paper, code, and contact</h2></div>
-        <div class="resource-list"><div><span>Paper</span><p><strong>ICASSP 2027 manuscript</strong><br />The public PDF link will be enabled after the release timing is confirmed.</p><em>Pending</em></div><div><span>Code</span><p><strong>LiteBallNet repository</strong><br />Code, inference, evaluation, and future model resources.</p><a data-repository-link href="https://github.com/apexanthony/LiteBallNet" target="_blank" rel="noreferrer">Open repository ↗</a></div><div><span>Contact</span><p><strong>Corresponding authors</strong><br />liqiang1@sztu.edu.cn · wangpeizheng@sztu.edu.cn</p><em>SZTU</em></div></div>
+        <div class="section-heading"><span>Resources</span><h2>Paper and contact</h2></div>
+        <div class="resource-list">
+          <div><span>Paper</span><p><strong>ICASSP 2027 manuscript</strong><br />The public PDF link will be enabled after the release timing is confirmed.</p><em>Pending</em></div>
+          <!-- ICASSP public version: source code remains private until acceptance.
+          <div><span>Code</span><p><strong>LiteBallNet repository</strong><br />Code, inference, evaluation, and future model resources.</p><a data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Open repository ↗</a></div>
+          -->
+          <div><span>Contact</span><p><strong>Corresponding authors</strong><br />liqiang1@sztu.edu.cn · wangpeizheng@sztu.edu.cn</p><em>SZTU</em></div>
+        </div>
       </section>
     </main>
 
