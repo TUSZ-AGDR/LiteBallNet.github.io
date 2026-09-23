@@ -1,0 +1,11 @@
+Mobile-recorded prototype videos
+--------------------------------
+mobile_recorded/VID1_tennis.mp4
+mobile_recorded/VID2_table_tennis.mp4
+mobile_recorded/VID3_badminton.mp4
+
+Direct RKNN output videos
+-------------------------
+edge/tennis_rk3588.mp4
+edge/table_tennis_rk3588.mp4
+edge/badminton_rk3588.mp4
