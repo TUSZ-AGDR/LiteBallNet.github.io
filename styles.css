@@ -33,6 +33,7 @@ sup { color: var(--cyan-dark); font-size: .68em; font-weight: 700; }
 .nav-links { margin-left: auto; display: flex; align-items: center; gap: 1.2rem; }
 .nav-links a { color: var(--muted); font-size: .82rem; font-weight: 650; text-decoration: none; }
 .nav-links a:hover, .nav-links a:focus-visible { color: var(--cyan-dark); text-decoration: underline; text-underline-offset: 3px; }
+.nav-links a.is-disabled-link { color: var(--muted); opacity: .72; text-decoration: none; }
 
 main, footer { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
 .paper-header { max-width: 1040px; margin: 0 auto; padding: 4.7rem 0 3.1rem; text-align: center; }
@@ -48,6 +49,7 @@ main, footer { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; }
 .project-button.is-secondary { background: #fff; color: var(--ink); }
 .project-button.is-secondary:hover, .project-button.is-secondary:focus-visible { background: var(--soft); }
 .project-button.is-muted { border-color: var(--line-strong); background: var(--soft); color: var(--muted); cursor: default; }
+.is-disabled-link { pointer-events: none; cursor: default; }
 
 .metric-strip { display: grid; grid-template-columns: repeat(4, 1fr); overflow: hidden; border: 1px solid var(--line); border-radius: .55rem; background: var(--paper); }
 .metric-strip div { padding: 1rem 1.15rem; border-right: 1px solid var(--line); }
@@ -154,6 +156,7 @@ tbody tr.ours { background: var(--cyan-soft); color: var(--cyan-dark); font-weig
 .deployment-video-card figcaption { display: flex; flex-direction: column; padding: .75rem .85rem; }
 .deployment-video-card figcaption strong { font-size: .84rem; }
 .deployment-video-card figcaption span { color: var(--muted); font-size: .72rem; }
+.deployment-video-card--featured { grid-column: 1 / -1; width: min(100%, 760px); justify-self: center; }
 
 .resources-section { padding-bottom: 5rem; }
 .resource-list { border-top: 2px solid var(--ink); }
@@ -162,6 +165,8 @@ tbody tr.ours { background: var(--cyan-soft); color: var(--cyan-dark); font-weig
 .resource-list p { margin: 0; color: var(--muted); font-size: .8rem; }
 .resource-list p strong { color: var(--ink); font-size: .86rem; }
 .resource-list a, .resource-list em { color: var(--cyan-dark); font-size: .76rem; font-style: normal; font-weight: 700; white-space: nowrap; }
+.resource-list p a { color: var(--cyan-dark); font-size: inherit; font-weight: 600; white-space: normal; text-decoration: none; }
+.resource-list p a:hover { text-decoration: underline; }
 
 footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .76rem; }
 footer p { margin: 0; }

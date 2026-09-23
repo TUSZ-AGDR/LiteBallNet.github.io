@@ -27,7 +27,8 @@
 | Tennis / Badminton / Table Tennis 视频 | Demos | 展示真实连续跟踪输出 |
 | 三个视频封面 | Demos | 视频加载前显示代表帧 |
 | Badminton / Table Tennis / Tennis RK3588 端侧视频 | Deployment | 展示 RKNN/NPU 模型推理及画面内吞吐率 |
-| 三个 RK3588 视频封面 | Deployment | 端侧视频加载前显示代表帧 |
+| 跨运动实拍端侧原型视频 | Deployment | 展示 RK3588 NPU 原型系统在三类运动上的实际运行画面与轨迹输出 |
+| 四个 RK3588 视频封面 | Deployment | 端侧视频加载前显示代表帧 |
 | Coordinate Attention internals | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
 | Hard-negative construction | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
 | Frame-matched component ablation | Supplementary analysis | ICASSP 公开版已注释隐藏；journal 扩展版可恢复 |
@@ -40,7 +41,7 @@
 | 优先级 | 内容 | 处理建议 |
 |---:|---|---|
 | 1 | 正式论文 PDF / arXiv / IEEE Xplore | 确认公开时间后启用 Paper 按钮 |
-| 1 | 完整代码、权重和 RKNN 模型 | 录用后发布；当前所有 Code 入口已注释隐藏 |
+| 1 | 完整代码、权重和 RKNN 模型 | 录用后发布；当前仅显示不可点击的发布提示，不提供 private 链接 |
 | 2 | 可复现环境与推理命令 | 加入 GitHub README |
 | 2 | 数据集与视频许可说明 | 在仓库和项目页明确来源与许可 |
 | 2 | RK3588 端侧测试说明 | 已加入演示；后续公开代码时补充设备、线程和计时配置 |
@@ -49,8 +50,8 @@
 ## 四、发布前核对
 
 - [ ] 论文公开时间已经确认，Paper 链接不会提前泄露投稿材料。
-- [ ] 录用后再将代码仓库转为 public，并恢复网页中的 Code 入口。
-- [ ] 三段视频来源允许网页展示与再分发。
+- [ ] 录用后再将代码仓库转为 public，并解除网页中 Code 入口的禁用状态。
+- [ ] 所有视频来源允许网页展示与再分发。
 - [ ] 表格数字与最终 `liteballnet_icassp2027.tex` 保持一致。
 - [ ] 明确同一网络架构分别训练三个 checkpoint，而不是同一 checkpoint 同时处理三种运动。
 - [ ] HN 始终标为 training-only。

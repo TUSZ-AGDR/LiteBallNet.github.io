@@ -7,8 +7,8 @@
     <meta name="theme-color" content="#f7f8fa" />
     <title>LiteBallNet · ICASSP 2027</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css?v=7" />
-    <script defer src="script.js?v=6"></script>
+    <link rel="stylesheet" href="styles.css?v=8" />
+    <script defer src="script.js?v=7"></script>
   </head>
 
   <body>
@@ -18,11 +18,11 @@
       <div class="nav-links">
         <a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#demos">Demos</a>
         <a href="#results">Results</a>
-        <!-- ICASSP public version: enable these links after the corresponding
-             supplementary analysis and source code are released.
+        <!-- ICASSP public version: enable supplementary analysis only for a
+             future extended or journal version.
         <a href="#analysis">Analysis</a>
-        <a data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Code ↗</a>
         -->
+        <a class="is-disabled-link" data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer" aria-disabled="true" tabindex="-1" onclick="return false;">Code · after acceptance</a>
       </div>
     </nav>
 
@@ -38,9 +38,7 @@
         </div>
         <div class="paper-links" aria-label="Paper resources">
           <span class="project-button is-muted" aria-label="Paper link will be added after public release">Paper · after release</span>
-          <!-- ICASSP public version: source code will be released after acceptance.
-          <a class="project-button" data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Code · GitHub</a>
-          -->
+          <a class="project-button is-muted is-disabled-link" data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer" aria-disabled="true" tabindex="-1" onclick="return false;" aria-label="Source code will be released after paper acceptance">Code · after acceptance</a>
           <a class="project-button is-secondary" href="#demos">Videos</a><a class="project-button is-secondary" href="#results">Results</a>
         </div>
       </header>
@@ -155,9 +153,16 @@
         <p class="deployment-note">Reported values are model-inference measurements; end-to-end camera, decoding, and display latency is not claimed.</p>
         <div class="deployment-video-heading">
           <h3>RK3588 NPU deployment demonstrations</h3>
-          <p>On-device RKNN inference across badminton, table tennis, and tennis. The overlays report the measured model-inference throughput rather than end-to-end camera-to-display latency.</p>
+          <p>Three sport-specific clips show RKNN inference across badminton, table tennis, and tennis; the featured recording shows a live cross-sport RK3588 edge-deployment prototype. The overlays report model-inference throughput rather than end-to-end camera-to-display latency.</p>
         </div>
         <div class="deployment-video-grid">
+          <figure class="deployment-video-card deployment-video-card--featured">
+            <video controls muted loop playsinline preload="metadata" poster="assets/posters/live_rk3588_prototype_poster.jpg" aria-label="Mobile-recorded cross-sport RK3588 edge-deployment prototype demonstration">
+              <source src="assets/videos/edge/live_rk3588_prototype.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <figcaption><strong>Mobile-recorded edge deployment</strong><span>RK3588 NPU prototype · Cross-sport inference</span></figcaption>
+          </figure>
           <figure class="deployment-video-card">
             <video controls muted loop playsinline preload="metadata" poster="assets/posters/badminton_rk3588_poster.jpg" aria-label="Badminton RK3588 NPU inference demonstration">
               <source src="assets/videos/edge/badminton_rk3588.mp4" type="video/mp4" />
@@ -183,13 +188,11 @@
       </section>
 
       <section class="content-section resources-section" id="resources">
-        <div class="section-heading"><span>Resources</span><h2>Paper and contact</h2></div>
+        <div class="section-heading"><span>Resources</span><h2>Paper, code, and contact</h2></div>
         <div class="resource-list">
           <div><span>Paper</span><p><strong>ICASSP 2027 manuscript</strong><br />The public PDF link will be enabled after the release timing is confirmed.</p><em>Pending</em></div>
-          <!-- ICASSP public version: source code remains private until acceptance.
-          <div><span>Code</span><p><strong>LiteBallNet repository</strong><br />Code, inference, evaluation, and future model resources.</p><a data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer">Open repository ↗</a></div>
-          -->
-          <div><span>Contact</span><p><strong>Corresponding authors</strong><br />liqiang1@sztu.edu.cn · wangpeizheng@sztu.edu.cn</p><em>SZTU</em></div>
+          <div><span>Code</span><p><strong>LiteBallNet repository</strong><br />Source code, checkpoints, and deployment resources will be released after acceptance.</p><a class="is-disabled-link" data-repository-link href="https://github.com/TUSZ-AGDR/LiteBallNet" target="_blank" rel="noreferrer" aria-disabled="true" tabindex="-1" onclick="return false;">After acceptance</a></div>
+          <div><span>Contact</span><p><strong>Corresponding authors</strong><br /><a href="mailto:liqiang1@sztu.edu.cn">liqiang1@sztu.edu.cn</a> · <a href="mailto:wangpeizheng@sztu.edu.cn">wangpeizheng@sztu.edu.cn</a></p><em>SZTU</em></div>
         </div>
       </section>
     </main>

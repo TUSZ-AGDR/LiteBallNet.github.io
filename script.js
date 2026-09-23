@@ -1,3 +1,5 @@
+// The repository remains private until paper acceptance. Its buttons are
+// rendered in a disabled state in index.html.
 const REPOSITORY_URL = "https://github.com/TUSZ-AGDR/LiteBallNet";
 
 document.querySelectorAll("[data-repository-link]").forEach((link) => {
