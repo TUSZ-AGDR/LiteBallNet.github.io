@@ -9,7 +9,7 @@
 - Figure 1 网络结构图及其矢量 PDF
 - Figure 2 精度–延迟图及其矢量 PDF
 - 完整跨运动主结果表与组件消融表
-- 45,644 parameters、1.876 GMAC、RTX 3060 Laptop 86.30 FPS，以及 RK3588 NPU 37.0 ms / 约 30 FPS
+- 45,644 parameters、1.876 GMAC、RTX 3060 Laptop 86.30 FPS，以及 RK3588 NPU INT8 三核并行约 46 FPS（纯推理）
 - Badminton / Table Tennis / Tennis 的 F1：0.9361 / 0.9859 / 0.9517
 - 三段真实跟踪演示、三段 RK3588 NPU 基准部署视频，以及一段跨运动实拍端侧原型视频与对应封面
 - Coordinate Attention、hard-negative mask、帧级消融、置信度案例、局部 HN 对比和时序响应图的源码与资产仍然保留，但在 ICASSP 公开版中已注释隐藏
